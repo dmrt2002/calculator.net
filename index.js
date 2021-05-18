@@ -33,12 +33,12 @@
     })
 
     sin.addEventListener("click",function(e){
-       let answer = Math.sin(screen.value);
+       let answer = Math.sin(math.radians(screen.value));
         screen.value = answer
     })
 
     cos.addEventListener("click",function(e){
-        let answer = Math.cos(screen.value);
+        let answer = Math.cos(math.radians(screen.value));
         screen.value = answer
     })
 
