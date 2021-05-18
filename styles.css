@@ -75,3 +75,4 @@
     transition-duration: 0.4s;
   }
  
+  body{width:100%;margin:auto;min-width:400px;max-width:2000px}
