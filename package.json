@@ -1,0 +1,24 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "simple calculator",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run lite",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmrt2002/calculator.net.git"
+  },
+  "author": "R Tushar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmrt2002/calculator.net/issues"
+  },
+  "homepage": "https://github.com/dmrt2002/calculator.net#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
