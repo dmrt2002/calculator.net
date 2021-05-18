@@ -1,8 +1,9 @@
-(function () {
+ (function () {
     let screen = document.querySelector(".screen")
     let buttons = document.querySelectorAll(".button");
     let clear = document.querySelector(".btn-clear");
     let equal = document.querySelector(".btn-equal");
+    let back = document.querySelector(".btn-back");
 
     buttons.forEach(function(button){
         button.addEventListener("click",function(e){
@@ -23,4 +24,9 @@
     clear.addEventListener("click",function(e){
         screen.value = "";
     })
+
+    back.addEventListener("click",function(e){
+        screen.value = screen.value.substring(0,screen.value.length -1);
+    })
+
 })();

@@ -55,8 +55,15 @@
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
   }
+  
+  #impbutton:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  }
 
-  .btn-equal {
+
+  #impbutton {
     background-color: lightcyan;
     color:rgb(27, 26, 26);
     border:0.2px solid black;
@@ -67,3 +74,4 @@
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
   }
+ 
