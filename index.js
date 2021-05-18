@@ -4,6 +4,9 @@
     let clear = document.querySelector(".btn-clear");
     let equal = document.querySelector(".btn-equal");
     let back = document.querySelector(".btn-back");
+    let sin = document.querySelector(".btn-sin");
+    let cos = document.querySelector(".btn-cos");
+
 
     buttons.forEach(function(button){
         button.addEventListener("click",function(e){
@@ -27,6 +30,16 @@
 
     back.addEventListener("click",function(e){
         screen.value = screen.value.substring(0,screen.value.length -1);
+    })
+
+    sin.addEventListener("click",function(e){
+       let answer = Math.sin(screen.value);
+        screen.value = answer
+    })
+
+    cos.addEventListener("click",function(e){
+        let answer = Math.cos(screen.value);
+        screen.value = answer
     })
 
 })();
