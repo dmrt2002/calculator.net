@@ -1,7 +1,7 @@
 ś<!DOCTYPE html>
 <html lang="en">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=yes">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -22,18 +22,18 @@
          <div class="container-fluid box row">
                 <section class="calculator">
                     <form>
-                        <input type="text" name ="screen " id="screen "
+                        <input type="text" style="text-align: center;" name ="screen " id="screen "
                         class="screen" readonly>
                     </form>
                     <br>
                     <div class="buttons">
                      
-                              <button type="button" class="button" data-num="*">*</button>
-                              <button type="button" class="button" data-num="/">/</button>
-                              <button type="button" class="button" data-num="+">+</button>
-                              <button type="button" class="button" data-num="-">-</button>
-                              <button type="button" id="impbutton" class="btn-sin" data-num="sin">sin</button>
-                              <button type="button" id="impbutton" class="btn-cos" data-num="cos">cos</button>
+                        <button type="button" class="button" data-num="*">*</button>
+                        <button type="button" class="button" data-num="/">/</button>
+                        <button type="button" class="button" data-num="+">+</button>
+                        <button type="button" class="button" data-num="-">-</button>
+                        <button type="button" id="impbutton" class="btn-sin" data-num="sin">sin</button>
+                        <button type="button" id="impbutton" class="btn-cos" data-num="cos">cos</button>
                  
                              <br>
                       
@@ -51,7 +51,7 @@
                                   <button type="button" class="button" data-num="4">4</button>
                                   <button type="button" class="button" data-num="3">3</button>
                                   <button type="button" class="button" data-num="2">2</button>
-                                  <button type="button" id="impbutton" class="btn-back" data-num="back">esc</button> 
+                                  <button type="button" id="impbutton" class="btn-back" data-num="back">del</button> 
                                   <button type="button" id="impbutton" class="btn-square" data-num="square">x2</button> 
                      
                              <br>
@@ -63,6 +63,16 @@
                               <button type="button" class="button" data-num=".">.</button>
                               <button type="button" id="impbutton" class="btn-lan" data-num="ln">ln</button> 
                               <button type="button" id="impbutton" class="btn-equal" data-num="=">=</button> 
+
+                              <br>
+
+                              
+                              <button type="button" class="btn-per" id="impbutton" data-num="%">%</button>
+                              <button type="button" class="btn-rec" id="impbutton" data-num="1/x">1/x</button>
+                              <button type="button" id="impbutton"class="btn-root" data-num="root">√</button>
+                              <button type="button" class="btn-e"id="impbutton"data-num="e">e</button>
+                              <button type="button" id="impbutton"class="btn-cube" data-num="cube">x3</button> 
+                              <button type="button" id="impbutton" class="btn-fact" data-num="x!">x!</button> 
 
                      </div>                          
                      <br><br>
@@ -80,5 +90,6 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
       <script src="index.js"></script>
+
     </body> 
 </html>
