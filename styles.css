@@ -75,9 +75,6 @@
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
   }
-<<<<<<< HEAD
-  body{width:100%;margin:auto;min-width:450px;max-width:2000px}
-=======
  
   body{width:100%;margin:auto;min-width:400px;max-width:2000px}
->>>>>>> 9acc4636f20e64fd698779cfb93b32581a51614b
+
