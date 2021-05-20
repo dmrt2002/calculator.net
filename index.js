@@ -165,6 +165,7 @@
               errName.innerHTML = ""
               setTimeout(function(){
                 errName.innerHTML = ""
+                screen.value = ""
               },1000);
         } else if(errName.innerHTML.includes("sin") || errName.innerHTML.includes("cos") || errName.innerHTML.includes("tan") ||
                      errName.innerHTML.includes("^2") || errName.innerHTML.includes("log") || errName.innerHTML.includes("π") || 
@@ -190,7 +191,9 @@
               errName.innerHTML = ""
               setTimeout(function(){
                 errName.innerHTML = ""
+                screen.value = ""
               },1000);
+              
         }else if(errName.innerHTML.includes("log") || errName.innerHTML.includes("sin") || errName.innerHTML.includes("cos") || errName.innerHTML.includes("tan") ||
                      errName.innerHTML.includes("^2") || errName.innerHTML.includes("π") || errName.innerHTML.includes("log") ||
                      errName.innerHTML.includes("√") || errName.innerHTML.includes("e") || errName.innerHTML.includes("%") || 
@@ -210,7 +213,8 @@
         if(screen.value === ""){
             Error.innerHTML = "Enter a value"
             setTimeout(function(){
-                Error.innerHTML = ""
+                Error.innerHTML = "3.1415926536"
+                screen.value = "3.1415926536"
               },3000);
               errName.innerHTML = ""
               setTimeout(function(){
@@ -237,9 +241,9 @@
             setTimeout(function(){
                 Error.innerHTML = ""
               },3000);
-              errName.innerHTML = ""
               setTimeout(function(){
                 errName.innerHTML = ""
+                screen.value = ""
               },1000);
         }else if(errName.innerHTML.includes("sin") || errName.innerHTML.includes("cos") || errName.innerHTML.includes("tan") ||
                      errName.innerHTML.includes("^2") || errName.innerHTML.includes("log") || errName.innerHTML.includes("π") || 
@@ -266,6 +270,7 @@
               errName.innerHTML = ""
               setTimeout(function(){
                 errName.innerHTML = ""
+                screen.value = ""
               },1000);
         } else if(errName.innerHTML.includes("sin") || errName.innerHTML.includes("cos") || errName.innerHTML.includes("tan") ||
         errName.innerHTML.includes("^2") || errName.innerHTML.includes("log") || errName.innerHTML.includes("π") || 
@@ -273,9 +278,9 @@
         errName.innerHTML.includes("^3") || errName.innerHTML.includes("1/") || errName.innerHTML.includes("1/") ||
         errName.innerHTML.includes("+") || errName.innerHTML.includes("-") || errName.innerHTML.includes("/") || 
         errName.innerHTML.includes("*")){
-            errName.innerHTML = errName.innerHTML + "e *" + screen.value
+            errName.innerHTML = errName.innerHTML  + " *e"
         }else{
-            errName.innerHTML = "e *" + screen.value
+            errName.innerHTML =  screen.value + " *e"
         }
         screen.value *= 2.7182818285
         errName.innerHTML += "= " + screen.value;
@@ -297,13 +302,18 @@
         errName.innerHTML.includes("√") || errName.innerHTML.includes("e") || errName.innerHTML.includes("%") || 
         errName.innerHTML.includes("^3") || errName.innerHTML.includes("1/") || errName.innerHTML.includes("1/") ||
         errName.innerHTML.includes("+") || errName.innerHTML.includes("-") || errName.innerHTML.includes("/") || 
-        errName.innerHTML.includes("*")){
+        errName.innerHTML.includes("*") || errName.innerHTML.includes("!")){
             errName.innerHTML = errName.innerHTML.substring (0, errName.innerHTML.length -screen.value.length);
-        } else {
-            errName.innerHTML = screen.value + "%"
+            errName.innerHTML = errName.innerHTML + screen.value + "%"
             screen.value *= 0.01
-            errName.innerHTML += "= " + screen.value;
+            errName.innerHTML = errName.innerHTML  +"=" +  + screen.value;
+
+
+        } else {
+           screen.value *= 0.01
+           errName.innerHTML += "%" + "= " + screen.value;
         }
+        
     })
 
     cube.addEventListener("click",function(e){
@@ -316,19 +326,18 @@
               setTimeout(function(){
                 errName.innerHTML = ""
               },1000);
-        } else if(errName.innerHTML.includes("sin") || errName.innerHTML.includes("cos") || errName.innerHTML.includes("tan") ||
+        } else if(screen.value ==! "" || errName.innerHTML.includes("sin") || errName.innerHTML.includes("cos") || errName.innerHTML.includes("tan") ||
         errName.innerHTML.includes("^2") || errName.innerHTML.includes("log") || errName.innerHTML.includes("π") || 
         errName.innerHTML.includes("√") || errName.innerHTML.includes("e") || errName.innerHTML.includes("%") || 
         errName.innerHTML.includes("^3") || errName.innerHTML.includes("1/") || errName.innerHTML.includes("1/") ||
         errName.innerHTML.includes("+") || errName.innerHTML.includes("-") || errName.innerHTML.includes("/") || 
-        errName.innerHTML.includes("*")){
+        errName.innerHTML.includes("*") || errName.innerHTML.includes("!")){
             errName.innerHTML = errName.innerHTML.substring (0, errName.innerHTML.length -screen.value.length);
-            errName.innerHTML = errName.innerHTML + screen.value^3 
+            errName.innerHTML = errName.innerHTML + screen.value + "^3"
         }else{
-            errName.innerHTML = screen.value^3 
+            errName.innerHTML = screen.value + "^3" 
         }
         screen.value = screen.value * screen.value * screen.value ;
-        errName.innerHTML += "= " + screen.value;
     })
 
     rec.addEventListener("click",function(e){
@@ -340,13 +349,14 @@
               errName.innerHTML = ""
               setTimeout(function(){
                 errName.innerHTML = ""
+                screen.value = ""
               },1000);
         }else if(errName.innerHTML.includes("sin") || errName.innerHTML.includes("cos") || errName.innerHTML.includes("tan") ||
         errName.innerHTML.includes("^2") || errName.innerHTML.includes("log") || errName.innerHTML.includes("π") || 
         errName.innerHTML.includes("√") || errName.innerHTML.includes("e") || errName.innerHTML.includes("%") || 
         errName.innerHTML.includes("^3") || errName.innerHTML.includes("1/") || errName.innerHTML.includes("1/") ||
         errName.innerHTML.includes("+") || errName.innerHTML.includes("-") || errName.innerHTML.includes("/") || 
-        errName.innerHTML.includes("*")){
+        errName.innerHTML.includes("*") || errName.innerHTML.includes("!")){
             errName.innerHTML = errName.innerHTML.substring (0, errName.innerHTML.length -screen.value.length);
             errName.innerHTML = errName.innerHTML + "1/" + screen.value
         }else{
@@ -367,20 +377,22 @@
             let fact = 1;
             for (i = 1; i <= screen.value ; i++){
                 fact *= i ;
-            }
-            if(errName.innerHTML.includes("sin") || errName.innerHTML.includes("cos") || errName.innerHTML.includes("tan") ||
+            } 
+            if(screen.value ==! "" || errName.innerHTML.includes("sin") || errName.innerHTML.includes("cos") || errName.innerHTML.includes("tan") ||
             errName.innerHTML.includes("^2") || errName.innerHTML.includes("log") || errName.innerHTML.includes("π") || 
             errName.innerHTML.includes("√") || errName.innerHTML.includes("e") || errName.innerHTML.includes("%") || 
             errName.innerHTML.includes("^3") || errName.innerHTML.includes("1/") || errName.innerHTML.includes("1/") ||
             errName.innerHTML.includes("+") || errName.innerHTML.includes("-") || errName.innerHTML.includes("/") || 
-            errName.innerHTML.includes("*")){
+            errName.innerHTML.includes("*") || errName.innerHTML.includes("!")){
                 errName.innerHTML = errName.innerHTML.substring (0, errName.innerHTML.length -screen.value.length);
                 errName.innerHTML = errName.innerHTML + screen.value + "!"
+                screen.value = fact ;
+                errName.innerHTML += "= " + screen.value;
             }else{
                 errName.innerHTML = screen.value + "!"
+                screen.value = fact
+                errName.innerHTML += "= " + screen.value;
             }
-            screen.value = fact
-            errName.innerHTML += "= " + screen.value;
         }
     })
 
