@@ -113,6 +113,7 @@
               errName.innerHTML = ""
               setTimeout(function(){
                 errName.innerHTML = ""
+               screen.value = ""
               },1000);
         }else if(errName.innerHTML.includes("sin") || errName.innerHTML.includes("tan") || errName.innerHTML.includes("cos") ||
                      errName.innerHTML.includes("^2") || errName.innerHTML.includes("log") || errName.innerHTML.includes("π") || 
