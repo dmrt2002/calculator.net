@@ -48,9 +48,16 @@
             setTimeout(function(){
                 Error.innerHTML = ""
               },3000);
-        }else{
+        }else if(errName.innerHTML.includes("sin") || errName.innerHTML.includes("cos") || errName.innerHTML.includes("tan") ||
+        errName.innerHTML.includes("^2") || errName.innerHTML.includes("log") || errName.innerHTML.includes("π") || 
+        errName.innerHTML.includes("√") || errName.innerHTML.includes("e") || errName.innerHTML.includes("%") || 
+        errName.innerHTML.includes("^3") || errName.innerHTML.includes("1/") || errName.innerHTML.includes("1/") ||
+        errName.innerHTML.includes("+") || errName.innerHTML.includes("-") || errName.innerHTML.includes("/") || 
+        errName.innerHTML.includes("*"))  {
             let answer =eval(screen.value);
             screen.value = answer;
+            errName.innerHTML += "=" + answer;
+        } else {
             errName.innerHTML += "=" + answer;
         }
     })
@@ -82,7 +89,9 @@
         }else if(errName.innerHTML.includes("sin") || errName.innerHTML.includes("cos") || errName.innerHTML.includes("tan") ||
                      errName.innerHTML.includes("^2") || errName.innerHTML.includes("log") || errName.innerHTML.includes("π") || 
                      errName.innerHTML.includes("√") || errName.innerHTML.includes("e") || errName.innerHTML.includes("%") || 
-                     errName.innerHTML.includes("^3") || errName.innerHTML.includes("1/") || errName.innerHTML.includes("1/") )  {
+                     errName.innerHTML.includes("^3") || errName.innerHTML.includes("1/") || errName.innerHTML.includes("1/") ||
+                     errName.innerHTML.includes("+") || errName.innerHTML.includes("-") || errName.innerHTML.includes("/") || 
+                     errName.innerHTML.includes("*"))  {
                          errName.innerHTML = errName.innerHTML.substring (0, errName.innerHTML.length -screen.value.length);
                          errName.innerHTML = errName.innerHTML + "sin " + screen.value
 
@@ -108,7 +117,9 @@
         }else if(errName.innerHTML.includes("sin") || errName.innerHTML.includes("tan") || errName.innerHTML.includes("cos") ||
                      errName.innerHTML.includes("^2") || errName.innerHTML.includes("log") || errName.innerHTML.includes("π") || 
                      errName.innerHTML.includes("√") || errName.innerHTML.includes("e") || errName.innerHTML.includes("%") || 
-                     errName.innerHTML.includes("^3") || errName.innerHTML.includes("1/") || errName.innerHTML.includes("1/") ){
+                     errName.innerHTML.includes("^3") || errName.innerHTML.includes("1/") || errName.innerHTML.includes("1/") || 
+                     errName.innerHTML.includes("+") || errName.innerHTML.includes("-") || errName.innerHTML.includes("/") || 
+                     errName.innerHTML.includes("*")){
                      errName.innerHTML = errName.innerHTML.substring (0, errName.innerHTML.length -screen.value.length);
                      errName.innerHTML = errName.innerHTML + "cos " + screen.value
         }else{
@@ -132,7 +143,9 @@
         }else if(errName.innerHTML.includes("sin") || errName.innerHTML.includes("cos") || errName.innerHTML.includes("tan") ||
               errName.innerHTML.includes("^2") || errName.innerHTML.includes("log") || errName.innerHTML.includes("π") || 
               errName.innerHTML.includes("√") || errName.innerHTML.includes("e") || errName.innerHTML.includes("%") || 
-              errName.innerHTML.includes("^3") || errName.innerHTML.includes("1/") || errName.innerHTML.includes("!") ){
+              errName.innerHTML.includes("^3") || errName.innerHTML.includes("1/") || errName.innerHTML.includes("!") ||
+              errName.innerHTML.includes("+") || errName.innerHTML.includes("-") || errName.innerHTML.includes("/") || 
+              errName.innerHTML.includes("*")){
               errName.innerHTML = errName.innerHTML.substring (0, errName.innerHTML.length -screen.value.length);
               errName.innerHTML = errName.innerHTML + "tan " + screen.value
         }else{
@@ -156,7 +169,9 @@
         } else if(errName.innerHTML.includes("sin") || errName.innerHTML.includes("cos") || errName.innerHTML.includes("tan") ||
                      errName.innerHTML.includes("^2") || errName.innerHTML.includes("log") || errName.innerHTML.includes("π") || 
                      errName.innerHTML.includes("√") || errName.innerHTML.includes("e") || errName.innerHTML.includes("%") || 
-                     errName.innerHTML.includes("^3") || errName.innerHTML.includes("1/") || errName.innerHTML.includes("!") ){
+                     errName.innerHTML.includes("^3") || errName.innerHTML.includes("1/") || errName.innerHTML.includes("!") || 
+                     errName.innerHTML.includes("+") || errName.innerHTML.includes("-") || errName.innerHTML.includes("/") || 
+                     errName.innerHTML.includes("*")){
                      errName.innerHTML = errName.innerHTML.substring (0, errName.innerHTML.length -screen.value.length);
                      errName.innerHTML = errName.innerHTML + screen.value + "^2";
         }else{
@@ -179,7 +194,9 @@
         }else if(errName.innerHTML.includes("log") || errName.innerHTML.includes("sin") || errName.innerHTML.includes("cos") || errName.innerHTML.includes("tan") ||
                      errName.innerHTML.includes("^2") || errName.innerHTML.includes("π") || errName.innerHTML.includes("log") ||
                      errName.innerHTML.includes("√") || errName.innerHTML.includes("e") || errName.innerHTML.includes("%") || 
-                     errName.innerHTML.includes("^3") || errName.innerHTML.includes("1/") || errName.innerHTML.includes("!")) {        
+                     errName.innerHTML.includes("^3") || errName.innerHTML.includes("1/") || errName.innerHTML.includes("!") ||
+                     errName.innerHTML.includes("+") || errName.innerHTML.includes("-") || errName.innerHTML.includes("/") || 
+                     errName.innerHTML.includes("*")) {        
                      errName.innerHTML = errName.innerHTML.substring (0, errName.innerHTML.length -screen.value.length);
                      errName.innerHTML = errName.innerHTML +"log " + screen.value
         }else{
@@ -202,7 +219,9 @@
         } else if(errName.innerHTML.includes("sin") || errName.innerHTML.includes("cos") || errName.innerHTML.includes("tan") ||
                 errName.innerHTML.includes("^2") || errName.innerHTML.includes("log") || errName.innerHTML.includes("π") || 
                 errName.innerHTML.includes("√") || errName.innerHTML.includes("e") || errName.innerHTML.includes("%") || 
-                errName.innerHTML.includes("^3") || errName.innerHTML.includes("1/") || errName.innerHTML.includes("!")){
+                errName.innerHTML.includes("^3") || errName.innerHTML.includes("1/") || errName.innerHTML.includes("!") ||
+                errName.innerHTML.includes("+") || errName.innerHTML.includes("-") || errName.innerHTML.includes("/") || 
+                errName.innerHTML.includes("*")){
                 errName.innerHTML = errName.innerHTML.substring (0, errName.innerHTML.length -screen.value.length);
                 errName.innerHTML = errName.innerHTML + screen.value + " * π"
        }else{
@@ -225,7 +244,9 @@
         }else if(errName.innerHTML.includes("sin") || errName.innerHTML.includes("cos") || errName.innerHTML.includes("tan") ||
                      errName.innerHTML.includes("^2") || errName.innerHTML.includes("log") || errName.innerHTML.includes("π") || 
                      errName.innerHTML.includes("√") || errName.innerHTML.includes("e") || errName.innerHTML.includes("%") || 
-                     errName.innerHTML.includes("^3") || errName.innerHTML.includes("1/") || errName.innerHTML.includes("1/") ){
+                     errName.innerHTML.includes("^3") || errName.innerHTML.includes("1/") || errName.innerHTML.includes("1/") ||
+                     errName.innerHTML.includes("+") || errName.innerHTML.includes("-") || errName.innerHTML.includes("/") || 
+                     errName.innerHTML.includes("*")){
                      errName.innerHTML = errName.innerHTML.substring (0, errName.innerHTML.length -screen.value.length);
                      errName.innerHTML = errName.innerHTML + "√" + screen.value
         }else{
@@ -249,7 +270,9 @@
         } else if(errName.innerHTML.includes("sin") || errName.innerHTML.includes("cos") || errName.innerHTML.includes("tan") ||
         errName.innerHTML.includes("^2") || errName.innerHTML.includes("log") || errName.innerHTML.includes("π") || 
         errName.innerHTML.includes("√") || errName.innerHTML.includes("e") || errName.innerHTML.includes("%") || 
-        errName.innerHTML.includes("^3") || errName.innerHTML.includes("1/") || errName.innerHTML.includes("1/") ){
+        errName.innerHTML.includes("^3") || errName.innerHTML.includes("1/") || errName.innerHTML.includes("1/") ||
+        errName.innerHTML.includes("+") || errName.innerHTML.includes("-") || errName.innerHTML.includes("/") || 
+        errName.innerHTML.includes("*")){
             errName.innerHTML = errName.innerHTML + "e *" + screen.value
         }else{
             errName.innerHTML = "e *" + screen.value
@@ -272,7 +295,9 @@
       if (errName.innerHTML.includes("sin") || errName.innerHTML.includes("cos") || errName.innerHTML.includes("tan") ||
         errName.innerHTML.includes("^2") || errName.innerHTML.includes("log") || errName.innerHTML.includes("π") || 
         errName.innerHTML.includes("√") || errName.innerHTML.includes("e") || errName.innerHTML.includes("%") || 
-        errName.innerHTML.includes("^3") || errName.innerHTML.includes("1/") || errName.innerHTML.includes("1/") ){
+        errName.innerHTML.includes("^3") || errName.innerHTML.includes("1/") || errName.innerHTML.includes("1/") ||
+        errName.innerHTML.includes("+") || errName.innerHTML.includes("-") || errName.innerHTML.includes("/") || 
+        errName.innerHTML.includes("*")){
             errName.innerHTML = errName.innerHTML.substring (0, errName.innerHTML.length -screen.value.length);
         } else {
             errName.innerHTML = screen.value + "%"
@@ -294,7 +319,9 @@
         } else if(errName.innerHTML.includes("sin") || errName.innerHTML.includes("cos") || errName.innerHTML.includes("tan") ||
         errName.innerHTML.includes("^2") || errName.innerHTML.includes("log") || errName.innerHTML.includes("π") || 
         errName.innerHTML.includes("√") || errName.innerHTML.includes("e") || errName.innerHTML.includes("%") || 
-        errName.innerHTML.includes("^3") || errName.innerHTML.includes("1/") || errName.innerHTML.includes("1/") ){
+        errName.innerHTML.includes("^3") || errName.innerHTML.includes("1/") || errName.innerHTML.includes("1/") ||
+        errName.innerHTML.includes("+") || errName.innerHTML.includes("-") || errName.innerHTML.includes("/") || 
+        errName.innerHTML.includes("*")){
             errName.innerHTML = errName.innerHTML.substring (0, errName.innerHTML.length -screen.value.length);
             errName.innerHTML = errName.innerHTML + screen.value^3 
         }else{
@@ -317,7 +344,9 @@
         }else if(errName.innerHTML.includes("sin") || errName.innerHTML.includes("cos") || errName.innerHTML.includes("tan") ||
         errName.innerHTML.includes("^2") || errName.innerHTML.includes("log") || errName.innerHTML.includes("π") || 
         errName.innerHTML.includes("√") || errName.innerHTML.includes("e") || errName.innerHTML.includes("%") || 
-        errName.innerHTML.includes("^3") || errName.innerHTML.includes("1/") || errName.innerHTML.includes("1/") ){
+        errName.innerHTML.includes("^3") || errName.innerHTML.includes("1/") || errName.innerHTML.includes("1/") ||
+        errName.innerHTML.includes("+") || errName.innerHTML.includes("-") || errName.innerHTML.includes("/") || 
+        errName.innerHTML.includes("*")){
             errName.innerHTML = errName.innerHTML.substring (0, errName.innerHTML.length -screen.value.length);
             errName.innerHTML = errName.innerHTML + "1/" + screen.value
         }else{
@@ -342,7 +371,9 @@
             if(errName.innerHTML.includes("sin") || errName.innerHTML.includes("cos") || errName.innerHTML.includes("tan") ||
             errName.innerHTML.includes("^2") || errName.innerHTML.includes("log") || errName.innerHTML.includes("π") || 
             errName.innerHTML.includes("√") || errName.innerHTML.includes("e") || errName.innerHTML.includes("%") || 
-            errName.innerHTML.includes("^3") || errName.innerHTML.includes("1/") || errName.innerHTML.includes("1/") ){
+            errName.innerHTML.includes("^3") || errName.innerHTML.includes("1/") || errName.innerHTML.includes("1/") ||
+            errName.innerHTML.includes("+") || errName.innerHTML.includes("-") || errName.innerHTML.includes("/") || 
+            errName.innerHTML.includes("*")){
                 errName.innerHTML = errName.innerHTML.substring (0, errName.innerHTML.length -screen.value.length);
                 errName.innerHTML = errName.innerHTML + screen.value + "!"
             }else{
