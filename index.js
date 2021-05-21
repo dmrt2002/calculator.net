@@ -19,6 +19,7 @@
     var errName = document.querySelector(".error");
     var clearhist = document.querySelector(".btn-clearhistory");
     var Error = document.querySelector(".error1");
+    var hist = document.querySelector(".hist");
 
 
 
@@ -82,9 +83,9 @@
             setTimeout(function(){
                 Error.innerHTML = ""
               },3000);
+              errName.innerHTML = ""
               setTimeout(function(){
                 errName.innerHTML = ""
-               screen.value= ""
               },1000);
         }else if(errName.innerHTML.includes("sin") || errName.innerHTML.includes("cos") || errName.innerHTML.includes("tan") ||
                      errName.innerHTML.includes("^2") || errName.innerHTML.includes("log") || errName.innerHTML.includes("π") || 
@@ -110,9 +111,9 @@
             setTimeout(function(){
                 Error.innerHTML = ""
               },3000);
+              errName.innerHTML = ""
               setTimeout(function(){
                 errName.innerHTML = ""
-               screen.value = ""
               },1000);
         }else if(errName.innerHTML.includes("sin") || errName.innerHTML.includes("tan") || errName.innerHTML.includes("cos") ||
                      errName.innerHTML.includes("^2") || errName.innerHTML.includes("log") || errName.innerHTML.includes("π") || 
@@ -136,9 +137,9 @@
             setTimeout(function(){
                 Error.innerHTML = ""
               },3000);
+              errName.innerHTML = ""
               setTimeout(function(){
                 errName.innerHTML = ""
-                screen.value = ""
               },1000);
         }else if(errName.innerHTML.includes("sin") || errName.innerHTML.includes("cos") || errName.innerHTML.includes("tan") ||
               errName.innerHTML.includes("^2") || errName.innerHTML.includes("log") || errName.innerHTML.includes("π") || 
@@ -337,7 +338,9 @@
         }else{
             errName.innerHTML = screen.value + "^3" 
         }
-        screen.value = screen.value * screen.value * screen.value ;
+        let answer = screen.value*screen.value*screen.value ;
+        screen.value = answer
+        errName.innerHTML += "= " + answer;
     })
 
     rec.addEventListener("click",function(e){
@@ -398,6 +401,10 @@
 
     clearhist.addEventListener("click",function (e){
       errName.innerHTML = "";
+      screen.value = "";
     })
 
 })();
+
+
+
