@@ -12,11 +12,6 @@
         </title>
     </head>
     <body>
-        <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
-            <div class="container">
-                <a class="navbar-brand in" href="#">Calculator.in</a>
-            </div>
-        </nav>
      <div class="all">
            <br><br><br>
          <div class="container-fluid box row">
@@ -27,51 +22,56 @@
                         <input type="text" style="text-align: center;" name ="screen " id="screen "
                         class="screen" readonly>
                     </form>
-                    <div class="error"  style="text-align: center;" ></div>
+                    <div class="hist">HISTORY</div>
+                    <div class="error" style="text-align: center;" ></div>
                     <br>
-                    <button type="button" class="btn-clearhistory" id = "cbutton" data-num="allclear">C</button>
+                    <button type="button" class="btn-clearhistory" id = "cbutton" data-num="allclear">AC</button>
                     <div class="buttons">
                      
                         <button type="button" class="button" onclick="validation" data-num="*">*</button>
                         <button type="button" class="button" onclick="validation" data-num="/">/</button>
                         <button type="button" class="button" onclick="validation" data-num="+">+</button>
                         <button type="button" class="button" onclick="validation" data-num="-">-</button>
-                        <button type="button" id="impbutton" class="btn-sin" data-num="sin">sin</button>
-                        <button type="button" id="impbutton" class="btn-cos" data-num="cos">cos</button>
+                        <button type="button" class="btn-per" id="impbutton" data-num="%">%</button>
+                       
                  
                              <br>
-                      
-                              <button type="button" class="button" data-num="9">9</button>
-                              <button type="button" class="button" data-num="8">8</button>
+                              
                               <button type="button" class="button" data-num="7">7</button>
-                              <button type="button" class="button" data-num="6">6</button>
-                              <button type="button" id="impbutton" class="btn-tan" data-num="tan">tan</button>
-                              <button type="button" id="impbutton" class="btn-pie" data-num="pie">π</button>
-                        
-                    
+                              <button type="button" class="button" data-num="8">8</button>
+                              <button type="button" class="button" data-num="9">9</button>
+                              <button type="button" id="impbutton" class="btn-back" data-num="back">del</button> 
+                              <button type="button" id="impbuttonc" class="btn-clear" data-num="C">C</button>
+                              
                               <br>
-                      
-                                  <button type="button" class="button" data-num="5">5</button>
-                                  <button type="button" class="button" data-num="4">4</button>
-                                  <button type="button" class="button" data-num="3">3</button>
-                                  <button type="button" class="button" data-num="2">2</button>
-                                  <button type="button" id="impbutton" class="btn-back" data-num="back">del</button> 
-                                  <button type="button" id="impbutton" class="btn-square" data-num="square">x2</button>
+                                   
+                             <button type="button" class="button" data-num="4">4</button>
+                             <button type="button" class="button" data-num="5">5</button>
+                             <button type="button" class="button" data-num="6">6</button>
+                             <button type="button" id="impbutton" class="btn-sin" data-num="sin">sin</button>
+                             <button type="button" id="impbutton" class="btn-cos" data-num="cos">cos</button>
+                                 
                      
                              <br>
-
-
-                              <button type="button" class="button" data-num="1">1</button>
-                              <button type="button" class="button" data-num="0">0</button>
-                              <button type="button" id="impbuttonc" class="btn-clear" data-num="C">AC</button>
-                              <button type="button" class="button" data-num=".">.</button>
-                              <button type="button" id="impbutton" class="btn-lan" data-num="ln">ln</button> 
-                              <button type="button" id="impbutton" class="btn-equal" data-num="="> = </button> 
-
-                              <br>
-
+                               
+                               <button type="button" class="button" data-num="1">1</button>
+                               <button type="button" class="button" data-num="2">2</button>
+                               <button type="button" class="button" data-num="3">3</button>
+                               <button type="button" id="impbutton" class="btn-lan" data-num="ln">ln</button> 
+                               <button type="button" id="impbutton" class="btn-equal" data-num="="> = </button> 
                               
-                              <button type="button" class="btn-per" id="impbutton" data-num="%">%</button>
+
+                             <br>
+                           
+                             <button type="button" class="button" data-num=".">.</button>
+                             <button type="button" class="button" data-num="0">0</button>
+                             <button type="button" id="impbutton" class="btn-tan" data-num="tan">tan</button>
+                             <button type="button" id="impbutton" class="btn-pie" data-num="pie">π</button>
+                             <button type="button" id="impbutton" class="btn-square" data-num="square">x2</button>
+
+                             <br>
+                              
+                
                               <button type="button" class="btn-rec" id="impbutton" data-num="1/x">1/x</button>
                               <button type="button" id="impbutton"class="btn-root" data-num="root">√</button>
                               <button type="button" class="btn-e"id="impbutton"data-num="e">e</button>
@@ -79,7 +79,6 @@
                               <button type="button" id="impbutton" class="btn-fact" data-num="x!">x!</button> 
                             
                               <br>
-
                      </div>                          
                      <br><br>
                  </div>
@@ -99,5 +98,16 @@
 
       <script src="index.js"></script>
 
+      <script>
+          $(document).ready(function(){
+             $(".hist").hide();
+             $(".buttons").click(function(){
+                 $(".hist").show();
+             });
+          });
+      </script>
+
     </body> 
 </html>
+
+
