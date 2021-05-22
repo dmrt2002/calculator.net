@@ -16,22 +16,26 @@
            <br><br><br>
          <div class="container-fluid box row">
                 <section class="calculator">
-                    <div class="error1"></div>
+                    <div class="ErrorMessage"></div>             
                     <br>
                     <form>
                         <input type="text" style="text-align: center;" name ="screen " id="screen "
-                        class="screen" readonly>
+                        class="screen" readonly>            
                     </form>
-                    <div class="hist">HISTORY</div>
-                    <div class="error" style="text-align: center;" ></div>
-                    <br>
-                    <button type="button" class="btn-clearhistory" id = "cbutton" data-num="allclear">AC</button>
+                    <div class="HistText">HISTORY</div>                     
+                    <div class="History" style="text-align: center;" ></div>
+                    <br>        
+                    <button type="button" class="btn-clearhistory" id = "acbutton" data-num="allclear">AC</button> 
+                    <button type="button" class="btn-p" id = "impbutton" data-num="power"> x^y</button>
+                    <button type="button" id="impbutton" class="btn-sin-i" data-num="sin">isin</button>
+                    <button type="button" id="impbutton" class="btn-cos-i" data-num="cos">icos</button>
+                    <button type="button" id="impbutton" class="btn-tan-i" data-num="tan">itan</button> 
                     <div class="buttons">
-                     
-                        <button type="button" class="button" onclick="validation" data-num="*">*</button>
-                        <button type="button" class="button" onclick="validation" data-num="/">/</button>
-                        <button type="button" class="button" onclick="validation" data-num="+">+</button>
-                        <button type="button" class="button" onclick="validation" data-num="-">-</button>
+
+                        <button type="button" class="button" data-num="*">*</button>
+                        <button type="button" class="button" data-num="/">/</button>
+                        <button type="button" class="button" data-num="+">+</button>
+                        <button type="button" class="button" data-num="-">-</button>
                         <button type="button" class="btn-per" id="impbutton" data-num="%">%</button>
                        
                  
@@ -48,8 +52,8 @@
                              <button type="button" class="button" data-num="4">4</button>
                              <button type="button" class="button" data-num="5">5</button>
                              <button type="button" class="button" data-num="6">6</button>
-                             <button type="button" id="impbutton" class="btn-sin" data-num="sin">sin</button>
-                             <button type="button" id="impbutton" class="btn-cos" data-num="cos">cos</button>
+                             <button type="button" id="btn-sin" class="btn-sin" data-num="sin">sin</button>
+                             <button type="button" id="btn-cos" class="btn-cos" data-num="cos">cos</button>
                                  
                      
                              <br>
@@ -57,7 +61,7 @@
                                <button type="button" class="button" data-num="1">1</button>
                                <button type="button" class="button" data-num="2">2</button>
                                <button type="button" class="button" data-num="3">3</button>
-                               <button type="button" id="impbutton" class="btn-lan" data-num="ln">ln</button> 
+                               <button type="button" id="impbutton" class="btn-log" data-num="log">log</button> 
                                <button type="button" id="impbutton" class="btn-equal" data-num="="> = </button> 
                               
 
@@ -65,7 +69,7 @@
                            
                              <button type="button" class="button" data-num=".">.</button>
                              <button type="button" class="button" data-num="0">0</button>
-                             <button type="button" id="impbutton" class="btn-tan" data-num="tan">tan</button>
+                             <button type="button" id="btn-tan" class="btn-tan" data-num="tan">tan</button>
                              <button type="button" id="impbutton" class="btn-pie" data-num="pie">π</button>
                              <button type="button" id="impbutton" class="btn-square" data-num="square">x2</button>
 
@@ -99,15 +103,17 @@
       <script src="index.js"></script>
 
       <script>
-          $(document).ready(function(){
-             $(".hist").hide();
+          $(document).ready(function(){       
+             $(".HistText").hide();                 
              $(".buttons").click(function(){
-                 $(".hist").show();
+                 $(".HistText").show();
              });
+
           });
       </script>
 
     </body> 
 </html>
+
 
 
