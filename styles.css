@@ -1,12 +1,9 @@
 
 body {
-  background: url(https://media.istockphoto.com/vectors/vector-background-technology-in-the-concept-of-digital-vector-id1148006138?b=1&k=6&m=1148006138&s=612x612&w=0&h=1ooqKHKsx5Wuo9DmtMKS82l_VUgWhozgzmY1m41C7YU=) no-repeat;
+  background: url(back12.jpg) no-repeat;
   background-size: cover;
   font-family: Montserrat, sans-serif;
-  -webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+  
 }
 
 .box {
@@ -76,7 +73,7 @@ body {
     color: wheat;
   }
 
-  #cbutton {
+  #acbutton {
     background-color: rgb(163, 92, 92);
     color:rgb(27, 26, 26);
     border:0.2px solid black;
@@ -88,13 +85,13 @@ body {
     transition-duration: 0.4s;
   }
 
-  #cbutton:hover {
+  #acbutton:hover {
     background-color: #4CAF50; /* Green */
     color: white;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
   }
 
-.error1 {
+.ErrorMessage {
   text-align: center;
   color: red;
 }
@@ -116,7 +113,7 @@ body {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-.error {
+.History {
   color:white;
 }
 
@@ -124,7 +121,40 @@ button {
   width: 16.666666666666668%;
 }
 
-.hist {
+.HistText {
   color: white;
+}
+
+#btn-tan,#btn-cos,#btn-sin {
+  background-color: rgba(72, 153, 173, 0.801);
+  color:rgb(27, 26, 26);
+  border:0.2px solid black;
+  
+  text-align: center;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+#btn-tan:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 
+  rgba(0,0,0,0.19);
+}
+
+#btn-cos:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 
+  rgba(0,0,0,0.19);
+}
+
+#btn-sin:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 
+  rgba(0,0,0,0.19);
 }
 
