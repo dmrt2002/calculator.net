@@ -74,24 +74,25 @@ History.innerHTML.includes("*"))  {
        converting the the array into an array containing  */
 
 } else if (screen.value.includes("^")){                           
-            var values = screen.value.match(/[-+]?[0-9]*\.?[0-9]+/g)
+            let values = screen.value.match(/[-+]?[0-9]*\.?[0-9]+/g)
             console.log(values);
            x = values[0]
            y = values[1]
+           console.log(x)
+           console.log(y)
            let answer = Math.pow(x,y)
            screen.value = answer
-             if(History.innerHTML.includes("sin") || History.innerHTML.includes("cos") || History.innerHTML.includes("tan") ||
-                 History.innerHTML.includes("^2") || History.innerHTML.includes("log") || History.innerHTML.includes("π") || 
+             if(History.innerHTML.includes("sin") || History.innerHTML.includes("cos") || History.innerHTML.includes("tan") || History.innerHTML.includes("log") || History.innerHTML.includes("π") || 
                  History.innerHTML.includes("√") || History.innerHTML.includes("e") || History.innerHTML.includes("%") || 
-                 History.innerHTML.includes("^3") || History.innerHTML.includes("1/") || History.innerHTML.includes("1/") ||
+                 History.innerHTML.includes("^3") || History.innerHTML.includes("^3") || History.innerHTML.includes("1/") || History.innerHTML.includes("1/") ||
                  History.innerHTML.includes("+") || History.innerHTML.includes("-") || History.innerHTML.includes("/") || 
                  History.innerHTML.includes("*") || History.innerHTML.includes("^"))  {
                  
                   History.innerHTML = History.innerHTML.substring (0, History.innerHTML.length -screen.value.length);
                   History.innerHTML +=  '<br>'+ x + "^" + y + "=" + answer
                     } else {
-                        History.innerHTML = x + "^" + y + "=" + answer
-                       }
+                        History.innerHTML =  x + "^" + y + "=" + answer
+                       }   
             } 
 })
 
@@ -105,7 +106,6 @@ if (History.innerHTML.includes("=")){
     History.innerHTML = "";
 }
 screen.value = "";
-var values = "";
 })
 
 // deleting the previous digit in both screen and history div
