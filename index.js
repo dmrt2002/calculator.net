@@ -61,9 +61,9 @@ if(screen.value === ""){
                    // if condition is same for every operation
 
 }else if(History.innerHTML.includes("sin") || History.innerHTML.includes("cos") || History.innerHTML.includes("tan") ||
-History.innerHTML.includes("log") || History.innerHTML.includes("π") || History.innerHTML.includes("^3") ||
+History.innerHTML.includes("log") || History.innerHTML.includes("π") ||   History.innerHTML.includes("^2") ||
 History.innerHTML.includes("√") || History.innerHTML.includes("e") || History.innerHTML.includes("%") || 
-History.innerHTML.includes("1/") || History.innerHTML.includes("1/") ||  History.innerHTML.includes("^2") ||
+History.innerHTML.includes("1/") || History.innerHTML.includes("1/") || History.innerHTML.includes("^3") ||
 History.innerHTML.includes("+") || History.innerHTML.includes("-") || History.innerHTML.includes("/") || 
 History.innerHTML.includes("*"))  {
     let answer =eval(screen.value);
@@ -73,26 +73,26 @@ History.innerHTML.includes("*"))  {
     /*if the screen contains the symbol ^ if yes then extracting the string in the variable values
        converting the the array into an array containing  */
 
-} else if (screen.value.includes("^")){                           
+} else if (screen.value.includes("**")){                           
             let values = screen.value.match(/[-+]?[0-9]*\.?[0-9]+/g)
             console.log(values);
            x = values[0]
            y = values[1]
            console.log(x)
            console.log(y)
-           let answer = Math.pow(x,y)
+           let answer = x ** y 
            screen.value = answer
              if(History.innerHTML.includes("sin") || History.innerHTML.includes("cos") || History.innerHTML.includes("tan") || History.innerHTML.includes("log") || History.innerHTML.includes("π") || 
                  History.innerHTML.includes("√") || History.innerHTML.includes("e") || History.innerHTML.includes("%") || 
-                 History.innerHTML.includes("^3") || History.innerHTML.includes("^3") || History.innerHTML.includes("1/") || History.innerHTML.includes("1/") ||
+                 History.innerHTML.includes("1/") || History.innerHTML.includes("1/") || History.innerHTML.includes("^") ||
                  History.innerHTML.includes("+") || History.innerHTML.includes("-") || History.innerHTML.includes("/") || 
-                 History.innerHTML.includes("*") || History.innerHTML.includes("^"))  {
+                 History.innerHTML.includes("*") ||  History.innerHTML.includes("^2") ||  History.innerHTML.includes("^3") )  {
                  
-                  History.innerHTML = History.innerHTML.substring (0, History.innerHTML.length -screen.value.length);
-                  History.innerHTML +=  '<br>'+ x + "^" + y + "=" + answer
+                  History.innerHTML = History.innerHTML.substring (0, History.innerHTML.length -screen.value.length-3);
+                  History.innerHTML +=  x + "**" + y + "=" + answer
                     } else {
-                        History.innerHTML =  x + "^" + y + "=" + answer
-                       }   
+                        History.innerHTML =  x + "**" + y + "=" + answer
+                       }  
             } 
 })
 
@@ -132,7 +132,7 @@ if(screen.value === ""){
              History.innerHTML.includes("√") || History.innerHTML.includes("e") || History.innerHTML.includes("%") || 
              History.innerHTML.includes("^3") || History.innerHTML.includes("1/") || History.innerHTML.includes("1/") ||
              History.innerHTML.includes("+") || History.innerHTML.includes("-") || History.innerHTML.includes("/") || 
-             History.innerHTML.includes("*") || History.innerHTML.includes("^"))  {
+             History.innerHTML.includes("*") || History.innerHTML.includes("**"))  {
                 History.innerHTML = History.innerHTML.substring (0, History.innerHTML.length -screen.value.length);
                 History.innerHTML = History.innerHTML + "sin " + screen.value
 
@@ -162,7 +162,7 @@ if(screen.value === ""){
          History.innerHTML.includes("√") || History.innerHTML.includes("e") || History.innerHTML.includes("%") || 
          History.innerHTML.includes("^3") || History.innerHTML.includes("1/") || History.innerHTML.includes("1/") ||
          History.innerHTML.includes("+") || History.innerHTML.includes("-") || History.innerHTML.includes("/") || 
-         History.innerHTML.includes("*") || History.innerHTML.includes("^"))  {
+         History.innerHTML.includes("*") || History.innerHTML.includes("**"))  {
              History.innerHTML = History.innerHTML.substring (0, History.innerHTML.length -screen.value.length);
              History.innerHTML = History.innerHTML + "cos " + screen.value
 }else{
@@ -191,7 +191,7 @@ if(screen.value === ""){
           History.innerHTML.includes("√") || History.innerHTML.includes("e") || History.innerHTML.includes("%") || 
           History.innerHTML.includes("^3") || History.innerHTML.includes("1/") || History.innerHTML.includes("1/") ||
           History.innerHTML.includes("+") || History.innerHTML.includes("-") || History.innerHTML.includes("/") || 
-          History.innerHTML.includes("*") || History.innerHTML.includes("^"))  {
+          History.innerHTML.includes("*") || History.innerHTML.includes("**"))  {
              History.innerHTML = History.innerHTML.substring (0, History.innerHTML.length -screen.value.length);
              History.innerHTML = History.innerHTML + "tan " + screen.value
 }else{
@@ -221,7 +221,7 @@ if(screen.value === ""){
            History.innerHTML.includes("√") || History.innerHTML.includes("e") || History.innerHTML.includes("%") || 
            History.innerHTML.includes("^3") || History.innerHTML.includes("1/") || History.innerHTML.includes("1/") ||
            History.innerHTML.includes("+") || History.innerHTML.includes("-") || History.innerHTML.includes("/") || 
-           History.innerHTML.includes("*") || History.innerHTML.includes("^"))  {
+           History.innerHTML.includes("*") || History.innerHTML.includes("**"))  {
                 History.innerHTML = History.innerHTML.substring (0, History.innerHTML.length -screen.value.length);
                 History.innerHTML = History.innerHTML + screen.value + "^2";
 }else{
@@ -250,7 +250,7 @@ if(screen.value === ""){
           History.innerHTML.includes("√") || History.innerHTML.includes("e") || History.innerHTML.includes("%") || 
           History.innerHTML.includes("^3") || History.innerHTML.includes("1/") || History.innerHTML.includes("1/") ||
           History.innerHTML.includes("+") || History.innerHTML.includes("-") || History.innerHTML.includes("/") || 
-          History.innerHTML.includes("*") || History.innerHTML.includes("^"))  {        
+          History.innerHTML.includes("*") || History.innerHTML.includes("**"))  {        
                 History.innerHTML = History.innerHTML.substring (0, History.innerHTML.length -screen.value.length);
                 History.innerHTML = History.innerHTML +"log " + screen.value
 }else{
@@ -279,7 +279,7 @@ if(screen.value === ""){
            History.innerHTML.includes("√") || History.innerHTML.includes("e") || History.innerHTML.includes("%") || 
            History.innerHTML.includes("^3") || History.innerHTML.includes("1/") || History.innerHTML.includes("1/") ||
            History.innerHTML.includes("+") || History.innerHTML.includes("-") || History.innerHTML.includes("/") || 
-           History.innerHTML.includes("*") || History.innerHTML.includes("^"))  {
+           History.innerHTML.includes("*") || History.innerHTML.includes("**"))  {
               History.innerHTML = History.innerHTML.substring (0, History.innerHTML.length -screen.value.length);
               History.innerHTML += screen.value + " * π"
 }else{
@@ -307,7 +307,7 @@ if(screen.value === ""){
            History.innerHTML.includes("√") || History.innerHTML.includes("e") || History.innerHTML.includes("%") || 
            History.innerHTML.includes("^3") || History.innerHTML.includes("1/") || History.innerHTML.includes("1/") ||
            History.innerHTML.includes("+") || History.innerHTML.includes("-") || History.innerHTML.includes("/") || 
-           History.innerHTML.includes("*") || History.innerHTML.includes("^"))  {
+           History.innerHTML.includes("*") || History.innerHTML.includes("**"))  {
                 History.innerHTML= History.innerHTML.substring (0, History.innerHTML.length -screen.value.length);
                 History.innerHTML= History.innerHTML + "√" + screen.value
 }else{
@@ -336,7 +336,7 @@ if(screen.value === ""){
            History.innerHTML.includes("√") || History.innerHTML.includes("e") || History.innerHTML.includes("%") || 
            History.innerHTML.includes("^3") || History.innerHTML.includes("1/") || History.innerHTML.includes("1/") ||
            History.innerHTML.includes("+") || History.innerHTML.includes("-") || History.innerHTML.includes("/") || 
-           History.innerHTML.includes("*") || History.innerHTML.includes("^"))  {
+           History.innerHTML.includes("*") || History.innerHTML.includes("**"))  {
               History.innerHTML = History.innerHTML  + " *e"
 }else{
     History.innerHTML =  screen.value + " *e"
@@ -362,7 +362,7 @@ if(screen.value === ""){
             History.innerHTML.includes("√") || History.innerHTML.includes("e") || History.innerHTML.includes("%") || 
             History.innerHTML.includes("^3") || History.innerHTML.includes("1/") || History.innerHTML.includes("1/") ||
             History.innerHTML.includes("+") || History.innerHTML.includes("-") || History.innerHTML.includes("/") || 
-            History.innerHTML.includes("*") || History.innerHTML.includes("^"))  {
+            History.innerHTML.includes("*") || History.innerHTML.includes("**"))  {
                 History.innerHTML = History.innerHTML.substring (0, History.innerHTML.length -screen.value.length);
                 History.innerHTML = History.innerHTML + screen.value + "%"
                 screen.value *= 0.01
@@ -392,7 +392,7 @@ if(screen.value === ""){
           History.innerHTML.includes("√") || History.innerHTML.includes("e") || History.innerHTML.includes("%") || 
           History.innerHTML.includes("^3") || History.innerHTML.includes("1/") || History.innerHTML.includes("1/") ||
           History.innerHTML.includes("+") || History.innerHTML.includes("-") || History.innerHTML.includes("/") || 
-          History.innerHTML.includes("*") || History.innerHTML.includes("^"))  {
+          History.innerHTML.includes("*") || History.innerHTML.includes("**"))  {
                History.innerHTML = History.innerHTML.substring (0, History.innerHTML.length -screen.value.length);
                History.innerHTML += screen.value + "^3"
 }else{
@@ -421,7 +421,7 @@ if(screen.value === ""){
           History.innerHTML.includes("√") || History.innerHTML.includes("e") || History.innerHTML.includes("%") || 
           History.innerHTML.includes("^3") || History.innerHTML.includes("1/") || History.innerHTML.includes("1/") ||
           History.innerHTML.includes("+") || History.innerHTML.includes("-") || History.innerHTML.includes("/") || 
-          History.innerHTML.includes("*") || History.innerHTML.includes("^"))  {
+          History.innerHTML.includes("*") || History.innerHTML.includes("**"))  {
               History.innerHTML = History.innerHTML.substring (0, History.innerHTML.length -screen.value.length);
               History.innerHTML +="1/" + screen.value
 }else{
@@ -450,7 +450,7 @@ else {
     History.innerHTML.includes("√") || History.innerHTML.includes("e") || History.innerHTML.includes("%") || 
     History.innerHTML.includes("^3") || History.innerHTML.includes("1/") || History.innerHTML.includes("1/") ||
     History.innerHTML.includes("+") || History.innerHTML.includes("-") || History.innerHTML.includes("/") || 
-    History.innerHTML.includes("*") || History.innerHTML.includes("^"))  {
+    History.innerHTML.includes("*") || History.innerHTML.includes("**"))  {
         History.innerHTML = History.innerHTML.substring (0, History.innerHTML.length -screen.value.length);
         History.innerHTML = History.innerHTML + screen.value + "!"
         screen.value = fact ;
@@ -482,8 +482,8 @@ if(screen.value === ""){
         screen.value = ""
       },1000);
 } else {
-    screen.value = screen.value + "^";
-    History.innerHTML += "^";
+    screen.value = screen.value + "**";
+    History.innerHTML += "**";
 }
 
 })
@@ -506,7 +506,7 @@ if(screen.value === ""){
              History.innerHTML.includes("√") || History.innerHTML.includes("e") || History.innerHTML.includes("%") || 
              History.innerHTML.includes("^3") || History.innerHTML.includes("1/") || History.innerHTML.includes("1/") ||
              History.innerHTML.includes("+") || History.innerHTML.includes("-") || History.innerHTML.includes("/") || 
-             History.innerHTML.includes("*") || History.innerHTML.includes("^"))  {
+             History.innerHTML.includes("*") || History.innerHTML.includes("**"))  {
                 History.innerHTML = History.innerHTML.substring (0, History.innerHTML.length -screen.value.length);
                 History.innerHTML = History.innerHTML + "asin" + screen.value
 
@@ -537,7 +537,7 @@ if(screen.value === ""){
              History.innerHTML.includes("√") || History.innerHTML.includes("e") || History.innerHTML.includes("%") || 
              History.innerHTML.includes("^3") || History.innerHTML.includes("1/") || History.innerHTML.includes("1/") ||
              History.innerHTML.includes("+") || History.innerHTML.includes("-") || History.innerHTML.includes("/") || 
-             History.innerHTML.includes("*") || History.innerHTML.includes("^"))  {
+             History.innerHTML.includes("*") || History.innerHTML.includes("**"))  {
                 History.innerHTML = History.innerHTML.substring (0, History.innerHTML.length -screen.value.length);
                 History.innerHTML = History.innerHTML + "acos" + screen.value
 
@@ -567,7 +567,7 @@ if(screen.value === ""){
              History.innerHTML.includes("√") || History.innerHTML.includes("e") || History.innerHTML.includes("%") || 
              History.innerHTML.includes("^3") || History.innerHTML.includes("1/") || History.innerHTML.includes("1/") ||
              History.innerHTML.includes("+") || History.innerHTML.includes("-") || History.innerHTML.includes("/") || 
-             History.innerHTML.includes("*") || History.innerHTML.includes("^"))  {
+             History.innerHTML.includes("*") || History.innerHTML.includes("**"))  {
                 History.innerHTML = History.innerHTML.substring (0, History.innerHTML.length -screen.value.length);
                 History.innerHTML = History.innerHTML + "atan" + screen.value
 
@@ -580,6 +580,7 @@ if(screen.value === ""){
 })
 
 })();
+
 
 
 
